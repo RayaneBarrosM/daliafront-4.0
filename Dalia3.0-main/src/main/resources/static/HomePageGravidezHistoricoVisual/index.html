@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage Gravidez</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Gravidez</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style id="sections-styles">
+
+.hero-header {
+    background-image: url('images/1b57fbf5c6b677801bee6ab4821ae79a0d1af388.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 975px;
+    padding-top: 33px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 37px;
+}
+
+.main-nav img {
+    width: 40px;
+    height: 40px;
+}
+
+.header-divider {
+    border: none;
+    border-top: 1px solid var(--text-dark);
+    margin-top: 21px;
+}
+
+@media (max-width: 768px) {
+    .hero-header {
+        min-height: 50vh;
+        padding-top: 20px;
+    }
+    .main-nav {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+.health-info-section {
+    padding-top: 74px;
+    padding-bottom: 91px;
+}
+
+.health-info-title {
+    font-weight: 600;
+    font-size: 65px;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 62px;
+}
+
+.health-info-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-health {
+    background-color: var(--background-green);
+    border-radius: 20px;
+    padding: 18px 25px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.2;
+    color: var(--text-dark);
+    flex-grow: 1;
+    max-width: 362px;
+}
+
+@media (max-width: 992px) {
+    .health-info-section {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+    .health-info-title {
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .health-info-buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .btn-health {
+        width: 100%;
+    }
+}
+
+
+.daily-registry-section {
+    background-color: var(--background-purple);
+    padding: 56px 0;
+}
+
+.daily-registry-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.registry-content {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.registry-title {
+    font-weight: 600;
+    font-size: 65px;
+    line-height: 1.2;
+    color: var(--text-dark-alt);
+}
+
+.registry-subtitle {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 1.2;
+    color: var(--text-dark-alt);
+    max-width: 910px;
+}
+
+.registry-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    flex-shrink: 0;
+}
+
+.btn-registry {
+    background-color: var(--background-purple-light);
+    border-radius: 20px;
+    padding: 18px 25px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.2;
+    color: var(--text-dark);
+    text-align: center;
+    width: 362px;
+}
+
+@media (max-width: 992px) {
+    .daily-registry-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .registry-title {
+        font-size: 48px;
+    }
+    .registry-subtitle {
+        font-size: 32px;
+    }
+    .btn-registry {
+        width: 100%;
+        max-width: 362px;
+    }
+}
+
+
+.articles-section {
+    padding-top: 120px;
+    padding-bottom: 85px;
+}
+
+.articles-main-title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 86px;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 63px;
+}
+
+.article-card {
+    background-color: var(--background-blue);
+    border-radius: 30px;
+    min-height: 439px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.article-card p {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--text-dark);
+}
+
+@media (max-width: 1200px) {
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .articles-main-title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .articles-section {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+    .article-card {
+        min-height: 250px;
+    }
+}
+
+/* CSS for section section:footer */
+.site-footer {
+    background-color: var(--background-gray);
+    padding: 28px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 157px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 47px;
+    flex-shrink: 0;
+}
+
+.footer-logo {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 28px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 87px;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+.links-column {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.links-column h3 {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.72px;
+}
+
+.links-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.links-column li a {
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.54px;
+}
+
+@media (max-width: 992px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        text-align: center;
+    }
+    .footer-nav {
+        width: 100%;
+        justify-content: space-around;
+        gap: 40px;
+    }
+    .links-column {
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+}
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<header id="header" class="hero-header">
+    <div class="container">
+        <nav class="main-nav">
+            <a href="#header"><img src="images/1_1169.svg" alt="Home"></a>
+            <a href="#daily-registry"><img src="images/1_1170.svg" alt="Calendar"></a>
+            <a href="#health-info"><img src="images/1_1174.svg" alt="Flower"></a>
+            <a href="#"><img src="images/1_1177.svg" alt="Group"></a>
+            <a href="#"><img src="images/1_1180.svg" alt="Profile"></a>
+        </nav>
+    </div>
+    <hr class="header-divider">
+</header>
+<section id="health-info" class="health-info-section">
+    <div class="container">
+        <h2 class="health-info-title">Sobre a sua saúde e a do seu bebê:</h2>
+        <div class="health-info-buttons">
+            <a href="#" class="btn-health">Caderneta de Vacinação</a>
+            <a href="#" class="btn-health">Mudanças no Corpo</a>
+            <a href="#" class="btn-health">Alimentação</a>
+        </div>
+    </div>
+</section>
+<section id="daily-registry" class="daily-registry-section">
+    <div class="container daily-registry-container">
+        <div class="registry-content">
+            <h2 class="registry-title">Registro Diário</h2>
+            <p class="registry-subtitle">Informações necessárias para o acompanhamento.</p>
+        </div>
+        <div class="registry-actions">
+            <a href="#" class="btn-registry">Registrar Agora</a>
+            <a href="registros.html" class="btn-registry">Ver Registros</a>
+        </div>
+    </div>
+</section>
+<section id="articles" class="articles-section">
+    <div class="container">
+        <h2 class="articles-main-title">Outras informações importantes:</h2>
+        <div class="articles-grid">
+            <a href="#" class="article-card">
+                <p>Hábitos que auxiliam mães a se adaptarem a uma nova rotina</p>
+            </a>
+            <a href="#" class="article-card">
+                <p>Alimentos essenciais para o desenvolvimento saudável do feto</p>
+            </a>
+            <a href="#" class="article-card">
+                <p>Exercícios permitidos durante o período de gestação</p>
+            </a>
+            <a href="#" class="article-card">
+                <p>Saúde Mental: como a terapia pode ajudar nesse momento?</p>
+            </a>
+        </div>
+    </div>
+</section>
+<footer id="footer" class="site-footer">
+    <div class="container footer-container">
+        <div class="footer-brand">
+            <img src="images/ae6ae65dc93ccfa9d41933f59af5a34a49c94d46.png" alt="Dália logo" class="footer-logo">
+            <div class="language-selector">
+                <img src="images/76_1404.svg" alt="Brasil flag">
+                <span>Português do Brasil</span>
+                <img src="images/76_1406.svg" alt="dropdown arrow">
+            </div>
+            <div class="social-links">
+                <a href="#"><img src="images/76_1408.svg" alt="Instagram"></a>
+                <a href="#"><img src="images/76_1409.svg" alt="Facebook"></a>
+                <a href="#"><img src="images/I76_1410_28_98.svg" alt="Youtube"></a>
+            </div>
+        </div>
+        <nav class="footer-nav">
+            <div class="links-column">
+                <h3>Empresa</h3>
+                <ul>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Marca</a></li>
+                </ul>
+            </div>
+            <div class="links-column">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Segurança</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Comunidade</a></li>
+                </ul>
+            </div>
+            <div class="links-column">
+                <h3>Política</h3>
+                <ul>
+                    <li><a href="#">Termos</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Moderação</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</footer>
+</body>
+</html>
