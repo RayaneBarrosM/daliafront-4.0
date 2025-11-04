@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -81,6 +81,25 @@
     </div>
     <p class="ovulacao">O dia em verde indica sua ovulação, o dia mais fértil do ciclo.</p>
   </div>
+</div>
+<div>
+    <button id="openButton">Adicionar Vacina</button>
+    <dialog id="modal-vacinas">
+        <h2>Vacinas</h2>
+        <p>Marque aqui sua próxima vacina</p>
+        <select class="vacinas-dropdown">Selecione a Vacina</select>
+            <option>dT-Tétano e difteria</option>
+            <option>dTpa-difteria, tétano e coqueluche</option>
+            <option>hepatite B</option>
+        </select>
+
+        <label for="data-vacina">Selecione a data:</label>
+        <input type="date" id="data-vacina">
+
+        <input type="text" id="anotacoes">
+        <button class="save">Salvar</button>
+        <button class="close">Fechar</button>
+    </dialog>
 </div>
 </body>
 </html>
