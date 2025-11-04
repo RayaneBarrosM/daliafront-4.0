@@ -1,3 +1,12 @@
+:root{
+  --color-mood: #d6bff3;
+  --color-habit: #c1d5f6;
+  --color-symptom: #ff8e8e;
+  --color-exercise: #b5dbd3;
+  --color-intimacy: #f6add5;
+  --color-secretion: #fef8c8;
+}
+
 div.fixed {
     position: fixed; top: 0; left: 0;
 }
@@ -73,11 +82,13 @@ nav img {
 
 h2 {
     font-size: 22px;
-    color: #000000;
     line-height: 42px;
-    border-bottom: 3px solid #000000;
-    width: 100px;
-    margin-left: 10px;
+
+}
+
+.title{
+    display:flex;
+    justify-content: center;
 }
 
 main {
@@ -96,17 +107,95 @@ main {
 }
 
 
-.mood, .habits, .sintomas, .flow {
+.mood, .habits, .symptoms, .exercise, .intimacy, .secretion {
     margin-top: 20px;
-   
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
-background: rgba(236, 213, 179, 0.40);
+    background: rgba(236, 213, 179, 0.40);
     padding: 20px 0;
+    background-image: linear-gradient(to right, #7badf860, #f6add5ab);
 }
+
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.mood-button{ background-color: var(--color-mood);}
+.habit-button{ background-color: var(--color-habit);}
+.symptom-button{ background-color: var(--color-symptom); }
+.exercise-button{ background-color: var(--color-exercise); }
+.intimacy-button{ background-color: var(--color-intimacy); }
+.secretion-button{ background-color: var(--color-secretion); }
+
+.add-button {
+  width: 76px;
+  height: 54px;
+  background-color: var(--color-habit);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.add-button::before,
+.add-button::after {
+  content: '';
+  position: absolute;
+  background-color: #000;
+  border: 1.5px solid #000;
+}
+
+.add-button::before {
+  width: 28px;
+  height: 3px;
+}
+
+.add-button::after {
+  width: 3px;
+  height: 28px;
+}
+
+.add-button.add-button--mood {
+    background-color: var(--color-mood);
+    height: 65px;
+}
+
+.add-button.add-button--symptom {
+    background-color: var(--color-symptom);
+}
+
+
+
+
+
+
+
+
 .sintomas{
     padding: 20px;
 }
