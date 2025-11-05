@@ -110,4 +110,41 @@ document.addEventListener('DOMContentLoaded', async function () {
         console.error('Erro ao carregar dados do calendário:', error);
         calendarEl.innerHTML = '<p style="color: red;">Erro ao carregar o calendário.</p>';
     }
+
+// Elementos
+const openButton = document.getElementById("openButton");
+const dialog = document.getElementById("modal-vacinas");
+const closeButton = dialog.querySelector(".close");
+const saveButton = dialog.querySelector(".save");
+
+// Abrir modal
+openButton.addEventListener("click", (e) => {
+    dialog.showModal();
+});
+
+// Fechar modal
+closeButton.addEventListener("click", (e) => {
+    dialog.close();
+});
+
+// Salvar dados (exemplo)
+saveButton.addEventListener("click", (e) => {
+    const nomeVacina = document.querySelector('.vacinas-dropdown').value;
+    const data = document.querySelector('input[type="date"]').value;
+    const anotacoes = document.getElementById('anotacoes').value;
+
+    console.log({
+        vacina: nomeVacina,
+        data: data,
+        anotacoes: anotacoes
+    });
+
+    dialog.close();
+});
+
+// Fechar modal clicando fora
+dialog.addEventListener("click", (e) => {
+    if (e.target === dialog) {
+        dialog.close();
+    }
 });
